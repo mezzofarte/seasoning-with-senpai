@@ -2,10 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="048576bd-0d77-4f37-b9e9-ccba3d93ab99" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Salt Assault/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Salt Assault/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Salt Assault/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Salt Assault/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Salt Assault/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Salt Assault/riderModule.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Editor/JetBrains/JetBrains.Rider.Unity.Editor.Plugin.Repacked.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Enemy.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -47,15 +43,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+            <state relative-caret-position="450">
+              <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
               <folding>
-                <marker date="1551220804705" expanded="false" signature="6:78" ph="..." />
-                <marker date="1551220804705" expanded="true" signature="114:771" ph="{...}" />
-                <marker date="1551220804705" expanded="true" signature="280:413" ph="{...}" />
-                <marker date="1551220804705" expanded="true" signature="471:492" ph="{...}" />
-                <marker date="1551220804705" expanded="true" signature="540:764" ph="{...}" />
-                <marker date="1551220804705" expanded="true" signature="706:757" ph="{...}" />
+                <marker date="1551222113984" expanded="false" signature="6:78" ph="..." />
+                <marker date="1551222113984" expanded="true" signature="114:1061" ph="{...}" />
+                <marker date="1551222113984" expanded="true" signature="280:413" ph="{...}" />
+                <marker date="1551222113984" expanded="true" signature="471:492" ph="{...}" />
+                <marker date="1551222113984" expanded="true" signature="540:1054" ph="{...}" />
+                <marker date="1551222113984" expanded="true" signature="706:1047" ph="{...}" />
+                <marker date="1551222113984" expanded="true" signature="772:1037" ph="/* Debug.Log(collisionEvents[0].); ... */" />
               </folding>
             </state>
           </provider>
@@ -159,12 +156,12 @@
       <updated>1551215109013</updated>
       <workItem from="1551215113308" duration="337000" />
       <workItem from="1551217281731" duration="212000" />
-      <workItem from="1551217848004" duration="705000" />
+      <workItem from="1551217848004" duration="1538000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1254000" />
+    <option name="totallyTimeSpent" value="2087000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,15 +250,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        <state relative-caret-position="450">
+          <caret line="32" column="29" lean-forward="true" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
           <folding>
-            <marker date="1551220804705" expanded="false" signature="6:78" ph="..." />
-            <marker date="1551220804705" expanded="true" signature="114:771" ph="{...}" />
-            <marker date="1551220804705" expanded="true" signature="280:413" ph="{...}" />
-            <marker date="1551220804705" expanded="true" signature="471:492" ph="{...}" />
-            <marker date="1551220804705" expanded="true" signature="540:764" ph="{...}" />
-            <marker date="1551220804705" expanded="true" signature="706:757" ph="{...}" />
+            <marker date="1551222113984" expanded="false" signature="6:78" ph="..." />
+            <marker date="1551222113984" expanded="true" signature="114:1061" ph="{...}" />
+            <marker date="1551222113984" expanded="true" signature="280:413" ph="{...}" />
+            <marker date="1551222113984" expanded="true" signature="471:492" ph="{...}" />
+            <marker date="1551222113984" expanded="true" signature="540:1054" ph="{...}" />
+            <marker date="1551222113984" expanded="true" signature="706:1047" ph="{...}" />
+            <marker date="1551222113984" expanded="true" signature="772:1037" ph="/* Debug.Log(collisionEvents[0].); ... */" />
           </folding>
         </state>
       </provider>

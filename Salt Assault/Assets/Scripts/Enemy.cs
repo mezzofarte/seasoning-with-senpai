@@ -29,7 +29,19 @@ public class Enemy : MonoBehaviour
         int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         if (other.CompareTag("Player"))
         {
-            Debug.Log("test");
+            
+            Debug.Log("HIT");
+            //Debug.Log(collisionEvents[0].);
+            
+            //Destroy(other);
+            
+//            int i = 0;
+//
+//            while (i < numCollisionEvents)
+//            {
+//                Destroy(collisionEvents[i].);
+//                i++;
+//            }
         }
 
     }
