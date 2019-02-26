@@ -6,9 +6,13 @@ public class Enemy : MonoBehaviour
 {
     public ParticleSystem part;
     // Start is called before the first frame update
+    
+    public List<ParticleCollisionEvent> collisionEvents;
     void Start()
     {
-        part = GetComponent<ParticleSystem>();
+        //part = GetComponent<ParticleSystem>();
+        collisionEvents = new List<ParticleCollisionEvent>();
+        
 
     }
 
@@ -20,10 +24,12 @@ public class Enemy : MonoBehaviour
 
     void OnParticleCollision(GameObject other)
     {
-        int numCollisionEvents = particleSystem.GetCollisionEvents(other, collisionEvents);
+        
+        //Debug.Log("test");
+        int numCollisionEvents = part.GetCollisionEvents(other, collisionEvents);
         if (other.CompareTag("Player"))
         {
-            
+            Debug.Log("test");
         }
 
     }
