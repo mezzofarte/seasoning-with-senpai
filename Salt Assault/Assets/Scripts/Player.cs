@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class Player : MonoBehaviour
             health -= 2f;
             healthText.text = "HP: " + health.ToString();
         }
+        gameOver();
     }
 
     public void takeDamage()
@@ -39,4 +41,11 @@ public class Player : MonoBehaviour
         health -= .1f;
         healthText.text = "HP: " + health.ToString();
     }
-}
+    public void gameOver()
+    {
+        if (health<= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+}   
