@@ -17,6 +17,6 @@ public class HealthDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        healthText.text = string.Format("Health: {0}", gameController.getHealth());
+        //healthText.text = string.Format("Health: {0}", gameController.getHealth());
     }
 }
