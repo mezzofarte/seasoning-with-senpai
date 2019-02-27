@@ -17,13 +17,21 @@ public class Player : MonoBehaviour
         healthText.text = "HP: " + health.ToString();
     }
 
-    void FixedUpdate()
+    void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         player.AddForce(movement * speed);
+
+        Debug.Log(this.transform.position.y);
+
+        if (this.transform.position.y < -10f)
+        {
+            health -= 2f;
+            healthText.text = "HP: " + health.ToString();
+        }
     }
 
     public void takeDamage()
