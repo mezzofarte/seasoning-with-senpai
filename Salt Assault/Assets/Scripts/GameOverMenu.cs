@@ -8,10 +8,7 @@ public class GameOverMenu : MonoBehaviour
     
     public void PlayAgain()
     {
-        // Replace "Game" with name of first level
-        // when game is complete
-        //
-        // SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Main Scene");
     }
 
     public void QuitGame()
