@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     private Rigidbody player;
     public float health = 100f;
     public TextMeshProUGUI healthText;
+    public Image healthBar;
 
     void Start()
     {
@@ -31,7 +32,10 @@ public class Player : MonoBehaviour
         if (this.transform.position.y < -10f)
         {
             health -= 2f;
-            healthText.text = "HP: " + health.ToString();
+            if (health < 0) health = 0;
+            healthText.text = "HP: " + health.ToString("0");
+            float ratio = health / 100;
+            healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         }
         gameOver();
     }
@@ -39,7 +43,10 @@ public class Player : MonoBehaviour
     public void takeDamage()
     {
         health -= .1f;
-        healthText.text = "HP: " + health.ToString();
+        if (health < 0) health = 0;
+        healthText.text = "HP: " + health.ToString("0");
+        float ratio = health / 100;
+        healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
     public void gameOver()
     {
