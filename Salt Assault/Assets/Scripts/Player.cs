@@ -13,9 +13,17 @@ public class Player : MonoBehaviour
     public TextMeshProUGUI healthText;
     public Image healthBar;
 
-    void Start()
+    private Vector3 playerPosition;
+    private float stayStill = 0f;
+
+    private void Awake()
     {
         player = GetComponent<Rigidbody>();
+        playerPosition = this.transform.position;
+    }
+
+    void Start()
+    {
         healthText.text = "HP: " + health.ToString();
     }
 
@@ -27,26 +35,30 @@ public class Player : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         player.AddForce(movement * speed);
 
-        Debug.Log(this.transform.position.y);
+        //Debug.Log(this.transform.position.y);
 
+        if (playerPosition == this.transform.position)
+        {
+            stayStill += Time.deltaTime;
+        }
+        else
+        {
+            stayStill = 0;
+        }
+        playerPosition = this.transform.position;
         if (this.transform.position.y < -10f)
         {
             health -= 2f;
-            if (health < 0) health = 0;
-            healthText.text = "HP: " + health.ToString("0");
-            float ratio = health / 100;
-            healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
         }
         gameOver();
+        burning();
+        updateHealth();
     }
 
     public void takeDamage()
     {
         health -= .1f;
-        if (health < 0) health = 0;
-        healthText.text = "HP: " + health.ToString("0");
-        float ratio = health / 100;
-        healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        
     }
     public void gameOver()
     {
@@ -54,5 +66,22 @@ public class Player : MonoBehaviour
         {
             SceneManager.LoadScene("GameOver");
         }
+    }
+
+    public void burning()
+    {
+        if (stayStill>=3)
+        {
+            health -= .03f;
+            Debug.Log(stayStill);
+        }
+    }
+
+    private void updateHealth()
+    {
+        if (health < 0) health = 0;
+        healthText.text = "HP: " + health.ToString("0");
+        float ratio = health / 100;
+        healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 }   
