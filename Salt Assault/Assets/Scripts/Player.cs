@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float health = 100f;
     public TextMeshProUGUI healthText;
     public Image healthBar;
+    public UnityEvent onPlayerDeath;
 
     private Vector3 playerPosition;
     private float stayStill = 0f;
@@ -64,7 +65,7 @@ public class Player : MonoBehaviour
     {
         if (health<= 0)
         {
-            SceneManager.LoadScene("GameOver");
+            onPlayerDeath.Invoke();
         }
     }
 

@@ -6,11 +6,21 @@ public class GameController : MonoBehaviour
 {
     private float score = 0;
     private int health = 3;
+    public bool gameOver = false;
+    [SerializeField] private GameObject playerObject;
+    [SerializeField] private GameObject gameOverPanel;
 
-    // Update is called once per frame
+    void Awake()
+    {
+        playerObject.GetComponent<Player>().onPlayerDeath.AddListener(setGameOverPanelActive);
+    }
+
     void Update()
     {
-        score += (Time.deltaTime * 4);
+        if (!gameOver)
+        {
+            score += (Time.deltaTime * 4);
+        }
     }
 
     public int getScore()
@@ -21,5 +31,11 @@ public class GameController : MonoBehaviour
     public int getHealth()
     {
         return health;
+    }
+
+    void setGameOverPanelActive()
+    {
+        gameOver = true;
+        gameOverPanel.SetActive(true);
     }
 }
