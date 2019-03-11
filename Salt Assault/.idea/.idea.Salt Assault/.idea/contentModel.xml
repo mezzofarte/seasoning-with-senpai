@@ -11,9 +11,11 @@
           <e p="EnemyMovement.cs" t="Include" />
           <e p="EnemySpawner.cs" t="Include" />
           <e p="GameController.cs" t="Include" />
-          <e p="GameOverMenu.cs" t="Include" />
+          <e p="GameOverPanel.cs" t="Include" />
           <e p="HealthDisplay.cs" t="Include" />
           <e p="MainMenu.cs" t="Include" />
+          <e p="MainMenuCamera.cs" t="Include" />
+          <e p="PausePanel.cs" t="Include" />
           <e p="Player.cs" t="Include" />
           <e p="ScoreDisplay.cs" t="Include" />
         </e>

@@ -67,7 +67,7 @@ public class Enemy : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             
-            other.GetComponent<Player>().takeDamage();
+            other.GetComponent<Player>().season();
 
             //Destroy(other);
 

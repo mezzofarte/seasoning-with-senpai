@@ -18,6 +18,6 @@ public class ScoreDisplay : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        scoreText.text = string.Format("Score: {0}", gameController.getScore());
+        scoreText.text = string.Format("Steaks Served: {0}", gameController.getScore());
     }
 }

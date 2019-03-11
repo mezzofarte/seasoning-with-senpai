@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Shaker
+  - HealthObject
+  - HealthBar
   layers:
   - Default
   - TransparentFX

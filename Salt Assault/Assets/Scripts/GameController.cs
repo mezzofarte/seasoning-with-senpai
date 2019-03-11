@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class GameController : MonoBehaviour
 {
-    private float score = 0;
-    private int health = 3;
+    public GameObject steakPrefab;
+    private int score = 0;
     public bool gameOver = false;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private GameObject gameOverPanel;
@@ -17,25 +17,21 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
-        if (!gameOver)
-        {
-            score += (Time.deltaTime * 4);
-        }
     }
 
     public int getScore()
     {
-        return (int)score;
-    }
-
-    public int getHealth()
-    {
-        return health;
+        return score;
     }
 
     void setGameOverPanelActive()
     {
         gameOver = true;
         gameOverPanel.SetActive(true);
+    }
+    public void newSteak()
+    {
+        Instantiate(steakPrefab, new Vector3(26.2f, -6.9f, 46.9f),Quaternion.identity);
+        score++;
     }
 }

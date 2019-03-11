@@ -7,6 +7,7 @@ using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
+    public float seasoningScore = 0f;
     public float speed = 25f;
     private Rigidbody player;
     public float health = 100f;
@@ -18,6 +19,7 @@ public class Player : MonoBehaviour
     private bool isSeason = false;
     private float seasonDuration = 0f;
     private ParticleSystem particles;
+    public GameObject steak;
 
     private void Awake()
     {
@@ -28,8 +30,10 @@ public class Player : MonoBehaviour
 
     void Start()
     {
-        particles.Pause();
-        healthText.text = "HP: " + health.ToString();
+        healthText = GameObject.FindWithTag("HealthObject").GetComponent<TextMeshProUGUI>();
+        healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Image>();
+        //particles.Pause();
+        healthText.text = "Season: " + seasoningScore.ToString() + "%";
     }
 
     void Update()
@@ -55,34 +59,39 @@ public class Player : MonoBehaviour
         playerPosition = this.transform.position;
         if (this.transform.position.y < -10f)
         {
-            health -= 2f;
+            GameObject gameControllerobj = GameObject.FindWithTag("GameController");
+            gameControllerobj.GetComponent<GameController>().newSteak();
+            
+            Destroy(this);
         }
-        gameOver();
-        updateHealth();
+        updateSeasoningScore();
+        serveSteak();
     }
 
-    public void takeDamage()
+    public void season()
     {
-        particles.Play();
-        isSeason = true;
-        seasonDuration = 0;
-        health -= .1f;
+        seasoningScore += 1f;
         
     }
-    public void gameOver()
+    
+    public void serveSteak()
     {
-        if (health<= 0)
+        if (seasoningScore == 100 && Input.GetKeyDown(KeyCode.Space))
         {
-            onPlayerDeath.Invoke();
+            GameObject gameControllerobj = GameObject.FindWithTag("GameController");
+            gameControllerobj.GetComponent<GameController>().newSteak();
+            Destroy(steak);
+            
         }
     }
+    
 
-
-    private void updateHealth()
+    private void updateSeasoningScore()
     {
-        if (health < 0) health = 0;
-        healthText.text = "HP: " + health.ToString("0");
-        float ratio = health / 100;
+        if (seasoningScore < 0) seasoningScore = 0;
+        if (seasoningScore > 100) seasoningScore = 100;
+        healthText.text = "Season: " + seasoningScore.ToString("0") + "%";
+        float ratio = seasoningScore / 100;
         healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
     }
 }   
