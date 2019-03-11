@@ -15,16 +15,20 @@ public class Player : MonoBehaviour
     public UnityEvent onPlayerDeath;
 
     private Vector3 playerPosition;
-    private float stayStill = 0f;
+    private bool isSeason = false;
+    private float seasonDuration = 0f;
+    private ParticleSystem particles;
 
     private void Awake()
     {
         player = GetComponent<Rigidbody>();
         playerPosition = this.transform.position;
+        particles = this.GetComponentInChildren<ParticleSystem>();
     }
 
     void Start()
     {
+        particles.Pause();
         healthText.text = "HP: " + health.ToString();
     }
 
@@ -38,13 +42,15 @@ public class Player : MonoBehaviour
 
         //Debug.Log(this.transform.position.y);
 
-        if (playerPosition == this.transform.position)
+        if (isSeason && seasonDuration< 2)
         {
-            stayStill += Time.deltaTime;
+            seasonDuration += Time.deltaTime;
         }
-        else
+        if (isSeason && seasonDuration > 2)
         {
-            stayStill = 0;
+            isSeason = false;
+            particles.Pause();
+            particles.Clear();
         }
         playerPosition = this.transform.position;
         if (this.transform.position.y < -10f)
@@ -52,12 +58,14 @@ public class Player : MonoBehaviour
             health -= 2f;
         }
         gameOver();
-        burning();
         updateHealth();
     }
 
     public void takeDamage()
     {
+        particles.Play();
+        isSeason = true;
+        seasonDuration = 0;
         health -= .1f;
         
     }
@@ -69,14 +77,6 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void burning()
-    {
-        if (stayStill>=3)
-        {
-            health -= .03f;
-            Debug.Log(stayStill);
-        }
-    }
 
     private void updateHealth()
     {
