@@ -32,7 +32,7 @@ public class Player : MonoBehaviour
     {
         healthText = GameObject.FindWithTag("HealthObject").GetComponent<TextMeshProUGUI>();
         healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Image>();
-        //particles.Pause();
+        particles.Pause();
         healthText.text = "Season: " + seasoningScore.ToString() + "%";
     }
 
