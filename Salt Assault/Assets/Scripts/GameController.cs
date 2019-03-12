@@ -31,7 +31,9 @@ public class GameController : MonoBehaviour
     }
     public void newSteak()
     {
-        Instantiate(steakPrefab, new Vector3(26.2f, -6.9f, 46.9f),Quaternion.identity);
+        var rotation = new Quaternion();
+        rotation.eulerAngles = new Vector3(-90f, 0f, -40.938f);
+        Instantiate(steakPrefab, new Vector3(26.2f, -6.9f, 46.9f), rotation);
         score++;
     }
 }

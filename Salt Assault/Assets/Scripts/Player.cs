@@ -11,6 +11,7 @@ public class Player : MonoBehaviour
     public float speed = 25f;
     private Rigidbody player;
     public float health = 100f;
+    public Material material;
     public TextMeshProUGUI healthText;
     public Image healthBar;
     public UnityEvent onPlayerDeath;
@@ -32,8 +33,11 @@ public class Player : MonoBehaviour
     {
         healthText = GameObject.FindWithTag("HealthObject").GetComponent<TextMeshProUGUI>();
         healthBar = GameObject.FindWithTag("HealthBar").GetComponent<Image>();
-        particles.Pause();
+        // I commented this out because it kept giving an error: "NullReferenceException: Object reference not set to an instance of an object"
+        // particles.Pause();
         healthText.text = "Season: " + seasoningScore.ToString() + "%";
+        material = Resources.Load("Meat red", typeof(Material)) as Material;
+        material.color = Color.red;
     }
 
     void Update()
@@ -63,6 +67,14 @@ public class Player : MonoBehaviour
             gameControllerobj.GetComponent<GameController>().newSteak();
             
             Destroy(this);
+        }
+        if (seasoningScore == 50f)
+        {
+            material.color = new Color(0.580f, 0.114f, 0.106f, 0.0f);
+        }
+        if (seasoningScore == 100f)
+        {
+            material.color = new Color(0.392f, 0.165f, 0.106f, 0.0f);
         }
         updateSeasoningScore();
         serveSteak();

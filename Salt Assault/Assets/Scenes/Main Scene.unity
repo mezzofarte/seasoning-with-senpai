@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427135, b: 0.56452316, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -766,6 +766,7 @@ MonoBehaviour:
   seasoningScore: 0
   speed: 100
   health: 100
+  material: {fileID: 2100000, guid: 75c9b820992334dab8b5bb666f65e1ed, type: 2}
   healthText: {fileID: 1374701886}
   healthBar: {fileID: 732847370}
   onPlayerDeath:
@@ -5930,6 +5931,7 @@ MonoBehaviour:
   seasoningScore: 0
   speed: 25
   health: 100
+  material: {fileID: 0}
   healthText: {fileID: 0}
   healthBar: {fileID: 0}
   onPlayerDeath:
@@ -7593,7 +7595,7 @@ GameObject:
 --- !u!199 &1408128514
 ParticleSystemRenderer:
   serializedVersion: 6
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
