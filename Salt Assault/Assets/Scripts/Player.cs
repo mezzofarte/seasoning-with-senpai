@@ -19,14 +19,14 @@ public class Player : MonoBehaviour
     private Vector3 playerPosition;
     private bool isSeason = false;
     private float seasonDuration = 0f;
-    private ParticleSystem particles;
+    //private ParticleSystem particles;
     public GameObject steak;
 
     private void Awake()
     {
         player = GetComponent<Rigidbody>();
         playerPosition = this.transform.position;
-        particles = this.GetComponentInChildren<ParticleSystem>();
+        //particles = this.GetComponentInChildren<ParticleSystem>();
     }
 
     void Start()
@@ -57,8 +57,8 @@ public class Player : MonoBehaviour
         if (isSeason && seasonDuration > 2)
         {
             isSeason = false;
-            particles.Pause();
-            particles.Clear();
+/*            particles.Pause();
+            particles.Clear();*/
         }
         playerPosition = this.transform.position;
         if (this.transform.position.y < -10f)
@@ -92,6 +92,7 @@ public class Player : MonoBehaviour
         {
             GameObject gameControllerobj = GameObject.FindWithTag("GameController");
             gameControllerobj.GetComponent<GameController>().newSteak();
+            gameControllerobj.GetComponent<GameController>().increaseScore();
             Destroy(steak);
             
         }
