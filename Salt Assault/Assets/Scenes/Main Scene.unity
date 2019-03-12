@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.4366756, g: 0.48427135, b: 0.56452316, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667588, g: 0.48427194, b: 0.564524, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1629,11 +1629,12 @@ MonoBehaviour:
   playerObject: {fileID: 496366839}
   gameOverPanel: {fileID: 1409652004}
   camera: {fileID: 534669904}
-  wallLeft: {fileID: 953857545086214191, guid: daa4c3c52111547309c1810e533fdf48, type: 3}
-  wallRight: {fileID: 4085829439296883105, guid: 9bb706b83e8ab44fa8f2e9bfa9f6f550,
+  wallLeft: {fileID: 1877327039973786392, guid: daa4c3c52111547309c1810e533fdf48,
     type: 3}
-  wallUp: {fileID: 541530638288072940, guid: 8827a61fdda5245f4b7ea31f47f27ea3, type: 3}
-  wallDown: {fileID: 6000604809563226018, guid: 0f84726d260e241f78bb1e152410c4a5,
+  wallRight: {fileID: 1877327039973786392, guid: 0d73e0c501d904d27a2d77d64d3d6792,
+    type: 3}
+  wallUp: {fileID: 1877327039973786392, guid: 3c4e7373ba7b040afab817efa9f7922b, type: 3}
+  wallDown: {fileID: 1877327039973786392, guid: 3931423051f76433e83622e0663f1785,
     type: 3}
 --- !u!4 &733963853
 Transform:
