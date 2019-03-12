@@ -10,6 +10,9 @@ public class Enemy : MonoBehaviour
     private Transform startPosition;
     public float distance;
     public float angle = 0;
+    private Transform panCenter; //
+    public bool reset;//
+    private float speed; //
     
     // Start is called before the first frame update
     
@@ -21,34 +24,92 @@ public class Enemy : MonoBehaviour
 
         startPosition = GameObject.FindGameObjectWithTag("Shaker").transform;
         radius = GameObject.FindGameObjectWithTag("Shaker").GetComponent<CapsuleCollider>().radius;
+        panCenter = GameObject.FindWithTag("pancenter").transform;
+        reset = true;
+        speed = 1;
+
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        float randomAngle = Random.Range(-5f, 5f);
-        angle += randomAngle;
-        if (angle > 30f)
+//        float randomAngle = Random.Range(-5f, 5f);
+//        angle += randomAngle;
+//        if (angle > 30f)
+//        {
+//            angle = 30f;
+//        }
+//        else if (angle < -30f)
+//        {
+//            angle = -30f;
+//        }
+//        transform.RotateAround(startPosition.position, Vector3.up, 60 * Time.deltaTime);
+//        float distanceThisFrame = distance * Time.deltaTime;
+//        transform.Translate(Vector3.right * distanceThisFrame, Space.World);
+//        //transform.Translate(Vector3.forward * distanceThisFrame, Space.World);
+//        distance += Random.Range(-3f, 3f);
+//        if (distance > 25)
+//        {
+//            distance = 0;
+//        }
+//        else if (distance < -25)
+//        {
+//            distance = 0;
+//        }
+
+        if (Vector3.Distance(transform.position, panCenter.position) < 85 && reset)
+
         {
-            angle = 30f;
+            float randomAngle = Random.Range(-5f, 5f);
+            angle += randomAngle;
+            if (angle > 30f)
+            {
+                angle = 30f;
+            }
+            else if (angle < -30f)
+            {
+                angle = -30f;
+            }
+            
+            float randomAngleY = Random.Range(-25f, 25f);
+
+            Vector3 newDirection = transform.eulerAngles;
+
+            newDirection.y = newDirection.y + randomAngleY;
+
+            transform.eulerAngles = newDirection;
+
+            transform.Translate(newDirection.normalized);
+
+            distance += Random.Range(-3f, 3f);
+            if (distance > 20)
+            {
+                distance = 0;
+            }
+            else if (distance < -25)
+            {
+                distance = 0;
+            }
         }
-        else if (angle < -30f)
+        else
         {
-            angle = -30f;
-        }
-        transform.RotateAround(startPosition.position, Vector3.up, 60 * Time.deltaTime);
-        float distanceThisFrame = distance * Time.deltaTime;
-        transform.Translate(Vector3.right * distanceThisFrame, Space.World);
-        //transform.Translate(Vector3.forward * distanceThisFrame, Space.World);
-        distance += Random.Range(-3f, 3f);
-        if (distance > 25)
-        {
-            distance = 0;
-        }
-        else if (distance < -25)
-        {
-            distance = 0;
+            reset = false;
+ 
+            transform.position = Vector3.MoveTowards(transform.position, panCenter.position, speed);
+
+            if (Vector3.Distance(transform.position, panCenter.position) < 70 )
+            {
+
+                float randomAngleY = Random.Range(-180f, 180f);
+
+                Vector3 newDirection = transform.eulerAngles;
+                newDirection.y = newDirection.y + randomAngleY;
+            
+                transform.eulerAngles = newDirection;
+                transform.Translate(newDirection.normalized);
+                reset = true;
+            }
         }
     }
 
