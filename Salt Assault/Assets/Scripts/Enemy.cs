@@ -61,7 +61,7 @@ public class Enemy : MonoBehaviour
         if (Vector3.Distance(transform.position, panCenter.position) < 85 && reset)
 
         {
-            float randomAngle = Random.Range(-5f, 5f);
+            float randomAngle = Random.Range(-20f, 20f);
             angle += randomAngle;
             if (angle > 30f)
             {
@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
                 angle = -30f;
             }
             
-            float randomAngleY = Random.Range(-25f, 25f);
+            float randomAngleY = Random.Range(-5f, 5f);
 
             Vector3 newDirection = transform.eulerAngles;
 
@@ -98,7 +98,7 @@ public class Enemy : MonoBehaviour
  
             transform.position = Vector3.MoveTowards(transform.position, panCenter.position, speed);
 
-            if (Vector3.Distance(transform.position, panCenter.position) < 70 )
+            if (Vector3.Distance(transform.position, panCenter.position) < 20 )
             {
 
                 float randomAngleY = Random.Range(-180f, 180f);
