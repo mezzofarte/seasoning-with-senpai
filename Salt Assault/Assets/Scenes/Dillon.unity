@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.43667546, g: 0.48427135, b: 0.5645225, a: 1}
+  m_IndirectSpecularColor: {r: 0.43667555, g: 0.48427123, b: 0.5645229, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -271,7 +271,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.7
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -5464,6 +5464,7 @@ MonoBehaviour:
   seasoningScore: 0
   speed: 100
   health: 100
+  material: {fileID: 0}
   healthText: {fileID: 1374701886}
   healthBar: {fileID: 732847370}
   onPlayerDeath:
@@ -15326,6 +15327,7 @@ MonoBehaviour:
   seasoningScore: 0
   speed: 25
   health: 100
+  material: {fileID: 0}
   healthText: {fileID: 0}
   healthBar: {fileID: 0}
   onPlayerDeath:
@@ -15608,6 +15610,11 @@ MonoBehaviour:
   gameOver: 0
   playerObject: {fileID: 496366839}
   gameOverPanel: {fileID: 1409652004}
+  camera: {fileID: 0}
+  wallLeft: {fileID: 0}
+  wallRight: {fileID: 0}
+  wallUp: {fileID: 0}
+  wallDown: {fileID: 0}
 --- !u!4 &733963853
 Transform:
   m_ObjectHideFlags: 0
