@@ -82,25 +82,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+            <state relative-caret-position="570">
+              <caret line="82" column="57" lean-forward="true" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
               <folding>
-                <marker date="1552401097264" expanded="false" signature="6:78" ph="..." />
-                <marker date="1552401097264" expanded="true" signature="114:3898" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="496:907" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="970:3285" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="977:1753" ph="/* float randomAngle = Random.Range(-5f, 5f); ... */" />
-                <marker date="1552401097264" expanded="true" signature="1839:2659" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="1968:2025" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="2060:2118" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="2496:2554" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="2591:2649" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="2672:3279" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="2893:3269" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="3287:3407" ph="/* public void initialize( float r, Transform sP) ... */" />
-                <marker date="1552401097264" expanded="true" signature="3455:3891" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="3592:3884" ph="{...}" />
-                <marker date="1552401097264" expanded="true" signature="3680:3874" ph="/* Destroy(other); ... */" />
+                <marker date="1552401661315" expanded="false" signature="6:78" ph="..." />
+                <marker date="1552401661315" expanded="true" signature="114:3907" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="496:907" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="970:3294" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="977:1753" ph="/* float randomAngle = Random.Range(-5f, 5f); ... */" />
+                <marker date="1552401661315" expanded="true" signature="1839:2666" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="1969:2026" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="2061:2119" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="2499:2561" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="2598:2656" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="2679:3288" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="2900:3278" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="3296:3416" ph="/* public void initialize( float r, Transform sP) ... */" />
+                <marker date="1552401661315" expanded="true" signature="3464:3900" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="3601:3893" ph="{...}" />
+                <marker date="1552401661315" expanded="true" signature="3689:3883" ph="/* Destroy(other); ... */" />
               </folding>
             </state>
           </provider>
@@ -253,12 +253,12 @@
       <workItem from="1551217848004" duration="1538000" />
       <workItem from="1551223324113" duration="6125000" />
       <workItem from="1551229998198" duration="739000" />
-      <workItem from="1552368027856" duration="8619000" />
+      <workItem from="1552368027856" duration="9151000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19740000" />
+    <option name="totallyTimeSpent" value="20272000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -435,25 +435,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Enemy.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="93" column="9" lean-forward="true" selection-start-line="93" selection-start-column="9" selection-end-line="93" selection-end-column="9" />
+        <state relative-caret-position="570">
+          <caret line="82" column="57" lean-forward="true" selection-start-line="82" selection-start-column="57" selection-end-line="82" selection-end-column="57" />
           <folding>
-            <marker date="1552401097264" expanded="false" signature="6:78" ph="..." />
-            <marker date="1552401097264" expanded="true" signature="114:3898" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="496:907" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="970:3285" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="977:1753" ph="/* float randomAngle = Random.Range(-5f, 5f); ... */" />
-            <marker date="1552401097264" expanded="true" signature="1839:2659" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="1968:2025" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="2060:2118" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="2496:2554" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="2591:2649" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="2672:3279" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="2893:3269" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="3287:3407" ph="/* public void initialize( float r, Transform sP) ... */" />
-            <marker date="1552401097264" expanded="true" signature="3455:3891" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="3592:3884" ph="{...}" />
-            <marker date="1552401097264" expanded="true" signature="3680:3874" ph="/* Destroy(other); ... */" />
+            <marker date="1552401661315" expanded="false" signature="6:78" ph="..." />
+            <marker date="1552401661315" expanded="true" signature="114:3907" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="496:907" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="970:3294" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="977:1753" ph="/* float randomAngle = Random.Range(-5f, 5f); ... */" />
+            <marker date="1552401661315" expanded="true" signature="1839:2666" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="1969:2026" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="2061:2119" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="2499:2561" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="2598:2656" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="2679:3288" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="2900:3278" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="3296:3416" ph="/* public void initialize( float r, Transform sP) ... */" />
+            <marker date="1552401661315" expanded="true" signature="3464:3900" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="3601:3893" ph="{...}" />
+            <marker date="1552401661315" expanded="true" signature="3689:3883" ph="/* Destroy(other); ... */" />
           </folding>
         </state>
       </provider>
