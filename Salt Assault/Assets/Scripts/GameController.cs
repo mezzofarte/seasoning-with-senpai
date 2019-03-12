@@ -22,10 +22,11 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
-        Instantiate(wallLeft, camera.ScreenToWorldPoint(new Vector3(0,0,Screen.height / 2)), Quaternion.identity);
-        Instantiate(wallRight, camera.ScreenToWorldPoint(new Vector3(Screen.width,0,Screen.height / 2)), Quaternion.identity);
-        Instantiate(wallUp, camera.ScreenToWorldPoint(new Vector3(Screen.width/2,0,Screen.height / 2)), Quaternion.identity);
-        Instantiate(wallDown, camera.ScreenToWorldPoint(new Vector3(Screen.width/2,0,Screen.height)), Quaternion.identity);
+        Instantiate(wallLeft, camera.ScreenToWorldPoint(new Vector3(0,Screen.height / 2,0)), camera.transform.rotation);
+        Instantiate(wallRight, camera.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height / 2,0)), camera.transform.rotation);
+        
+        Instantiate(wallUp, camera.ScreenToWorldPoint(new Vector3(Screen.width / 2,0,0)), camera.transform.rotation);
+        Instantiate(wallDown, camera.ScreenToWorldPoint(new Vector3(Screen.width/2,Screen.height ,0)), camera.transform.rotation);
     }
 
     void Update()
