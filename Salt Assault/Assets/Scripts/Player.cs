@@ -45,6 +45,15 @@ public class Player : MonoBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            player.mass = .5f;
+        }
+        else
+        {
+            player.mass = 1;
+        }
+
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
         player.AddForce(movement * speed);
 
