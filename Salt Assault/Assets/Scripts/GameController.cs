@@ -14,6 +14,7 @@ public class GameController : MonoBehaviour
     public GameObject wallRight;
     public GameObject wallUp;
     public GameObject wallDown;
+    public float timeStart = 180f;
 
     void Awake()
     {
@@ -31,11 +32,25 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (!gameOver)
+        {
+            timeStart -= Time.deltaTime;
+        }
+
+        if (timeStart <= 0)
+        {
+            setGameOverPanelActive();
+        }
     }
 
     public int getScore()
     {
         return score;
+    }
+
+    public float getTime()
+    {
+        return timeStart;
     }
 
     public void increaseScore()
