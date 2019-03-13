@@ -9,7 +9,7 @@ public class Instructions : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            SceneManager.LoadScene("Main Scene");
+            SceneManager.LoadScene("Dri");
         }
     }
 }

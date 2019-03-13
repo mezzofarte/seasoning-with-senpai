@@ -14,8 +14,12 @@ public class Player : MonoBehaviour
     public Material material;
     public TextMeshProUGUI healthText;
     public Image healthBar;
+    public GameObject overseasonedBar;
+    public GameObject overseasonedText;
     public UnityEvent onPlayerDeath;
 
+    //private Image overseasonedBarImage;
+    //private TextMeshProUGUI overseasonedBarText;
     private Vector3 playerPosition;
     private bool isSeason = false;
     private float seasonDuration = 0f;
@@ -24,6 +28,11 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
+        //overseasonedBarImage = overseasonedBar.GetComponent<Image>();
+        //overseasonedBarImage.enabled = false;
+        //overseasonedBarText = overseasonedBar.GetComponentInChildren<TextMeshPro>();
+        //overseasonedBarText = overseasonedText.GetComponent<TextMeshProUGUI>();
+        //overseasonedBarText.enabled = false;
         player = GetComponent<Rigidbody>();
         playerPosition = this.transform.position;
         //particles = this.GetComponentInChildren<ParticleSystem>();
@@ -77,13 +86,17 @@ public class Player : MonoBehaviour
             gameControllerobj.GetComponent<GameController>().increaseFailed();
             Destroy(this);
         }
-        if (seasoningScore == 50f)
+        if (seasoningScore >= 130f)
         {
-            material.color = new Color(0.580f, 0.114f, 0.106f, 0.0f);
+            material.color = new Color(0f, 0f, 0f, 0f);
         }
-        if (seasoningScore == 100f)
+        else if (seasoningScore >= 100f)
         {
             material.color = new Color(0.392f, 0.165f, 0.106f, 0.0f);
+        }
+        else if (seasoningScore >= 50f)
+        {
+            material.color = new Color(0.580f, 0.114f, 0.106f, 0.0f);
         }
         updateSeasoningScore();
         serveSteak();
@@ -97,7 +110,16 @@ public class Player : MonoBehaviour
     
     public void serveSteak()
     {
-        if (seasoningScore == 100 && Input.GetKeyDown(KeyCode.Space))
+        if (seasoningScore >= 130 && Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject gameControllerobj = GameObject.FindWithTag("GameController");
+            gameControllerobj.GetComponent<GameController>().newSteak();
+            gameControllerobj.GetComponent<GameController>().increaseFailed();
+            Destroy(steak);
+            //overseasonedBarImage.enabled = false;
+            //overseasonedBarText.enabled = false;
+        }
+        else if (seasoningScore >= 100 && Input.GetKeyDown(KeyCode.Space))
         {
             GameObject gameControllerobj = GameObject.FindWithTag("GameController");
             gameControllerobj.GetComponent<GameController>().newSteak();
@@ -111,9 +133,12 @@ public class Player : MonoBehaviour
     private void updateSeasoningScore()
     {
         if (seasoningScore < 0) seasoningScore = 0;
-        if (seasoningScore > 100) seasoningScore = 100;
+        if (seasoningScore > 150) seasoningScore = 150;
         healthText.text = "Season: " + seasoningScore.ToString("0") + "%";
-        float ratio = seasoningScore / 100;
-        healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        if (seasoningScore <= 100)
+        {
+            float ratio = seasoningScore / 100;
+            healthBar.rectTransform.localScale = new Vector3(ratio, 1, 1);
+        }
     }
 }   
