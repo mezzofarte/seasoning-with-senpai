@@ -6,6 +6,7 @@ public class GameController : MonoBehaviour
 {
     public GameObject steakPrefab;
     private int score = 0;
+    private int failed = 0;
     public bool gameOver = false;
     [SerializeField] private GameObject playerObject;
     [SerializeField] private GameObject gameOverPanel;
@@ -23,6 +24,8 @@ public class GameController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
+
         Instantiate(wallLeft, camera.ScreenToWorldPoint(new Vector3(0,Screen.height / 2,0)), camera.transform.rotation);
         Instantiate(wallRight, camera.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height / 2,0)), camera.transform.rotation);
         
@@ -53,16 +56,31 @@ public class GameController : MonoBehaviour
         return timeStart;
     }
 
+    public float getFailed()
+    {
+        return failed;
+    }
+
+    public float getRating()
+    {
+        return (score * 0.5f) - (failed * 2f);
+    }
+
     public void increaseScore()
     {
         score++;
     }
-    
+
+    public void increaseFailed()
+    {
+        failed++;
+    }
 
     void setGameOverPanelActive()
     {
         gameOver = true;
         gameOverPanel.SetActive(true);
+        Time.timeScale = 0;
     }
     public void newSteak()
     {

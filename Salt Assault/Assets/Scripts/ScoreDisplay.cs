@@ -13,6 +13,7 @@ public class ScoreDisplay : MonoBehaviour
         GameObject gameControllerobj = GameObject.FindWithTag("GameController");
         gameController = gameControllerobj.GetComponent<GameController>();
         scoreText = this.GetComponent<TextMeshProUGUI>();
+        scoreText.text = string.Format("Steaks Served: {0}", gameController.getScore());
     }
 
     // Update is called once per frame

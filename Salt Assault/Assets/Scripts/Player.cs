@@ -74,7 +74,7 @@ public class Player : MonoBehaviour
         {
             GameObject gameControllerobj = GameObject.FindWithTag("GameController");
             gameControllerobj.GetComponent<GameController>().newSteak();
-            
+            gameControllerobj.GetComponent<GameController>().increaseFailed();
             Destroy(this);
         }
         if (seasoningScore == 50f)
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
 
     public void season()
     {
-        seasoningScore += 1f;
+        seasoningScore += 3f;
         
     }
     
