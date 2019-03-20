@@ -19,18 +19,18 @@ public class GameController : MonoBehaviour
 
     void Awake()
     {
-        playerObject.GetComponent<Player>().onPlayerDeath.AddListener(setGameOverPanelActive);
+
     }
 
     void Start()
     {
         Time.timeScale = 1;
 
-        Instantiate(wallLeft, camera.ScreenToWorldPoint(new Vector3(0,Screen.height / 2,0)), camera.transform.rotation);
-        Instantiate(wallRight, camera.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height / 2,0)), camera.transform.rotation);
-        
-        Instantiate(wallUp, camera.ScreenToWorldPoint(new Vector3(Screen.width / 2,0,0)), camera.transform.rotation);
-        Instantiate(wallDown, camera.ScreenToWorldPoint(new Vector3(Screen.width/2,Screen.height ,0)), camera.transform.rotation);
+        Instantiate(wallLeft, camera.ScreenToWorldPoint(new Vector3(0, Screen.height / 2, 0)), camera.transform.rotation);
+        Instantiate(wallRight, camera.ScreenToWorldPoint(new Vector3(Screen.width, Screen.height / 2, 0)), camera.transform.rotation);
+
+        Instantiate(wallUp, camera.ScreenToWorldPoint(new Vector3(Screen.width / 2, 0, 0)), camera.transform.rotation);
+        Instantiate(wallDown, camera.ScreenToWorldPoint(new Vector3(Screen.width / 2, Screen.height, 0)), camera.transform.rotation);
     }
 
     void Update()
@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
 
     public float getRating()
     {
-        return (score * 0.5f) - (failed * 2f);
+        return (score * 0.5f) - (failed * 1f);
     }
 
     public void increaseScore()

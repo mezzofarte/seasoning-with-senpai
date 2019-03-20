@@ -5687,13 +5687,6 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 75c9b820992334dab8b5bb666f65e1ed, type: 2}
   healthText: {fileID: 1374701886}
   healthBar: {fileID: 732847370}
-  overseasonedBar: {fileID: 649798318}
-  overseasonedText: {fileID: 1442158294}
-  onPlayerDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   steak: {fileID: 496366839}
 --- !u!54 &496366842
 Rigidbody:
@@ -6188,13 +6181,6 @@ MonoBehaviour:
   material: {fileID: 0}
   healthText: {fileID: 0}
   healthBar: {fileID: 0}
-  overseasonedBar: {fileID: 0}
-  overseasonedText: {fileID: 0}
-  onPlayerDeath:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
-      Culture=neutral, PublicKeyToken=null
   steak: {fileID: 0}
 --- !u!23 &599472827
 MeshRenderer:

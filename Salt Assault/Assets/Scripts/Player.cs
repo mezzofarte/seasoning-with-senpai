@@ -14,12 +14,7 @@ public class Player : MonoBehaviour
     public Material material;
     public TextMeshProUGUI healthText;
     public Image healthBar;
-    public GameObject overseasonedBar;
-    public GameObject overseasonedText;
-    public UnityEvent onPlayerDeath;
 
-    //private Image overseasonedBarImage;
-    //private TextMeshProUGUI overseasonedBarText;
     private Vector3 playerPosition;
     private bool isSeason = false;
     private float seasonDuration = 0f;
@@ -28,14 +23,8 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        //overseasonedBarImage = overseasonedBar.GetComponent<Image>();
-        //overseasonedBarImage.enabled = false;
-        //overseasonedBarText = overseasonedBar.GetComponentInChildren<TextMeshPro>();
-        //overseasonedBarText = overseasonedText.GetComponent<TextMeshProUGUI>();
-        //overseasonedBarText.enabled = false;
         player = GetComponent<Rigidbody>();
         playerPosition = this.transform.position;
-        //particles = this.GetComponentInChildren<ParticleSystem>();
     }
 
     void Start()
@@ -116,8 +105,6 @@ public class Player : MonoBehaviour
             gameControllerobj.GetComponent<GameController>().newSteak();
             gameControllerobj.GetComponent<GameController>().increaseFailed();
             Destroy(steak);
-            //overseasonedBarImage.enabled = false;
-            //overseasonedBarText.enabled = false;
         }
         else if (seasoningScore >= 100 && Input.GetKeyDown(KeyCode.Space))
         {
