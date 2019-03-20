@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -176,9 +176,10 @@ MonoBehaviour:
 
     To cook a steak, you have to move it around the pan to catch the salt, which will
     fill up your seasoning meter (this will be in the upper-right corner of the screen).
-    Once the meter is 100%, you can get a new steak to cook. However, your steak will
-    overcook once you go past 130%, so be careful! If your steak falls out of the
-    pan, no worries! A new one will be placed in the pan for you after a while.'
+    You can press SPACE to serve your steak. However, your steak needs to be within
+    80% to 130% seasoning or it will be considered a failed steak! If your steak falls
+    out of the pan, no worries! A new one will be placed in the pan for you after
+    a while.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6ecef1fdcefa991498e43bb02096a61e, type: 2}
   m_sharedMaterial: {fileID: 21247218835096714, guid: 6ecef1fdcefa991498e43bb02096a61e,
@@ -225,7 +226,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 469
+  m_firstOverflowCharacterIndex: 465
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -248,10 +249,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 22423911}
-    characterCount: 613
+    characterCount: 627
     spriteCount: 0
-    spaceCount: 125
-    wordCount: 125
+    spaceCount: 126
+    wordCount: 126
     linkCount: 0
     lineCount: 9
     pageCount: 1
@@ -898,18 +899,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.19
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.51
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 400054, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0.022371193
@@ -925,14 +914,6 @@ PrefabInstance:
     - target: {fileID: 400054, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.47391558
-      objectReference: {fileID: 0}
-    - target: {fileID: 400138, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.09
-      objectReference: {fileID: 0}
-    - target: {fileID: 400138, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 400162, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1078,6 +1059,26 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f2e6a9aa17b5d401788ca1d3cc641b94, type: 2}
+    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 400004, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400138, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 400138, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b5fcff4631014c98b7490b69c4eda5e, type: 3}
 --- !u!4 &511766490 stripped

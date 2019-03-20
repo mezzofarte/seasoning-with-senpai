@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class Player : MonoBehaviour
 {
     public float seasoningScore = 0f;
-    public float speed = 25f;
+    public float speed = 50f;
     private Rigidbody player;
     public float health = 100f;
     public Material material;
@@ -93,7 +93,7 @@ public class Player : MonoBehaviour
 
     public void season()
     {
-        seasoningScore += 3f;
+        seasoningScore += Random.Range(1.0f,5.0f);
         
     }
     
@@ -106,11 +106,19 @@ public class Player : MonoBehaviour
             gameControllerobj.GetComponent<GameController>().increaseFailed();
             Destroy(steak);
         }
-        else if (seasoningScore >= 100 && Input.GetKeyDown(KeyCode.Space))
+        else if (seasoningScore >= 80 && Input.GetKeyDown(KeyCode.Space))
         {
             GameObject gameControllerobj = GameObject.FindWithTag("GameController");
             gameControllerobj.GetComponent<GameController>().newSteak();
             gameControllerobj.GetComponent<GameController>().increaseScore();
+            Destroy(steak);
+            
+        }
+        else if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject gameControllerobj = GameObject.FindWithTag("GameController");
+            gameControllerobj.GetComponent<GameController>().newSteak();
+            gameControllerobj.GetComponent<GameController>().increaseFailed();
             Destroy(steak);
             
         }
