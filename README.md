@@ -1,7 +1,7 @@
 # seasoning-with-senpai
 A game in which you play as sentient steaks that must be seasoned well to impress your senpai.
 
-![game screenshot](https://raw.githubusercontent.com/mezzofarte/seasoning-with-senpai/master/Assets/screenshot.png)
+![game screenshot](https://raw.githubusercontent.com/mezzofarte/seasoning-with-senpai/master/seasoning-with-senpai/Assets/screenshot.png)
 
 Game Description:
 
