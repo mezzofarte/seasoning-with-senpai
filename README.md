@@ -81,3 +81,7 @@ Sarah Huang: UI, Main Menu, Pause Menu, Menu button animation
 Patrick Luong: Pan Boundaries, Speed variable for steak, Player/Steak movement, Obstacle effects (oil)
 
 Dillon Vuong: Particles, Obstacles, Hazards, Animations for normal objects
+
+Original repo: https://github.com/dillonvuong/Salt-Assault
+
+Created for ICS 161 in March 2019.
